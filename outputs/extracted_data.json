@@ -1,0 +1,217 @@
+{
+  "protocol_name": "MODBUS",
+  "protocol_version": "未提供",
+  "author": "北京阿尔泰科技 ART Technology Development Co.,Ltd.",
+  "doc_date": "未提供",
+  "doc_description": "MODBUS规约中文说明书，介绍MODBUS协议的通信方式、帧结构、功能码及寄存器地址定义",
+  "communication_type": "Modbus RTU / Modbus ASCII / Modbus TCP",
+  "ip_port": "未提供",
+  "protocol_config": "支持RS-232C串行接口，主从通信模式。RTU方式：字符间隔不超过1.5倍字符传输时间，帧间隔3.5倍字符传输时间。ASCII方式：以':'开始，'CR LF'结束。TCP方式：通过IP地址确定模块地址，无校验数据但增加数据序号。",
+  "signals": [
+    {
+      "id": "1",
+      "name": "第01路开关量输出状态",
+      "address": "00001",
+      "type": "Coil Status",
+      "unit": "无",
+      "remark": "=1高电平 =0低电平"
+    },
+    {
+      "id": "2",
+      "name": "第08路开关量输出状态",
+      "address": "00008",
+      "type": "Coil Status",
+      "unit": "无",
+      "remark": "=1高电平 =0低电平"
+    },
+    {
+      "id": "3",
+      "name": "第16路开关量输出状态",
+      "address": "00016",
+      "type": "Coil Status",
+      "unit": "无",
+      "remark": "=1高电平 =0低电平"
+    },
+    {
+      "id": "4",
+      "name": "第01路开关量输入状态",
+      "address": "10001",
+      "type": "Input Status",
+      "unit": "无",
+      "remark": "=0没有通电 =1接通电源"
+    },
+    {
+      "id": "5",
+      "name": "第08路开关量输入状态",
+      "address": "10008",
+      "type": "Input Status",
+      "unit": "无",
+      "remark": "=0没有通电 =1接通电源"
+    },
+    {
+      "id": "6",
+      "name": "第01路锁存状态",
+      "address": "10033",
+      "type": "Input Status",
+      "unit": "无",
+      "remark": "=0没有锁存 =1有锁存"
+    },
+    {
+      "id": "7",
+      "name": "第16路锁存状态",
+      "address": "10048",
+      "type": "Input Status",
+      "unit": "无",
+      "remark": "=0没有锁存 =1有锁存"
+    },
+    {
+      "id": "8",
+      "name": "第01路脉冲计数预制值低16位",
+      "address": "40001",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "低16位计数数值"
+    },
+    {
+      "id": "9",
+      "name": "第01路脉冲计数预制值高16位",
+      "address": "40002",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "高16位计数数值"
+    },
+    {
+      "id": "10",
+      "name": "模块类型寄存器",
+      "address": "40129",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "如：3011(HEX)"
+    },
+    {
+      "id": "11",
+      "name": "模块地址",
+      "address": "40133",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "如：01"
+    },
+    {
+      "id": "12",
+      "name": "模块波特率",
+      "address": "40134",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "如：03-9600bit/s"
+    },
+    {
+      "id": "13",
+      "name": "第01路工作模式",
+      "address": "40141",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "D3-D0:0-DI输入 1-计数 2-锁存; D4:0-下降沿 1-上升沿"
+    },
+    {
+      "id": "14",
+      "name": "输入锁存使能寄存器",
+      "address": "40173",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "设置位为使能，清除位为使无能"
+    },
+    {
+      "id": "15",
+      "name": "输入计数使能寄存器",
+      "address": "40177",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "设置位为使能，清除位为使无能"
+    },
+    {
+      "id": "16",
+      "name": "清通道计数",
+      "address": "40181",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "设置位为清除，清除位无意义"
+    },
+    {
+      "id": "17",
+      "name": "第1路模拟量输入模式",
+      "address": "40257",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "Bit15_Bit8必须为0，Bit7_Bit0采集量程"
+    },
+    {
+      "id": "18",
+      "name": "第1路DA模式",
+      "address": "40273",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "DAM-3060C模块各通道输出模式相同"
+    },
+    {
+      "id": "19",
+      "name": "第1路下限报警值低16位",
+      "address": "40289",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "使用浮点数表示"
+    },
+    {
+      "id": "20",
+      "name": "第1路上限报警值低16位",
+      "address": "40321",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "使用浮点数表示"
+    },
+    {
+      "id": "21",
+      "name": "看门狗控制寄存器",
+      "address": "40513",
+      "type": "Holding Register",
+      "unit": "无",
+      "remark": "Bit0=0狗使无能 1狗使能; Bit1=0狗未溢出 1狗溢出"
+    },
+    {
+      "id": "22",
+      "name": "第1路模拟量输入低16位",
+      "address": "30257",
+      "type": "Input Register",
+      "unit": "无",
+      "remark": "模拟量输入值"
+    },
+    {
+      "id": "23",
+      "name": "第01路开关量脉冲计数低16位",
+      "address": "30289",
+      "type": "Input Register",
+      "unit": "无",
+      "remark": "低16位计数数值"
+    },
+    {
+      "id": "24",
+      "name": "第01路开关量脉冲计数高16位",
+      "address": "30290",
+      "type": "Input Register",
+      "unit": "无",
+      "remark": "高16位计数数值"
+    },
+    {
+      "id": "25",
+      "name": "第1路DA回读值低16位",
+      "address": "30353",
+      "type": "Input Register",
+      "unit": "无",
+      "remark": "DA输出回读值"
+    }
+  ],
+  "data_format": "RTU方式：二进制，包含地址域、功能域、数据域、CRC校验。ASCII方式：ASCII字符，两个字符表示一个8位数据，包含':'起始、地址域、功能域、数据域、LRC校验、'CR LF'结束。TCP方式：增加数据序号和地址域，无校验数据。",
+  "timestamp": "未提供",
+  "error_codes": "功能码+0x80表示错误响应，错误代码：0x1或0x2",
+  "data_example": "读继电器状态请求：功能码01，起始地址0013(hex)，读取数量0013(hex)。响应：功能码01，字节计数03，状态数据CD 6B 05",
+  "appendix": "支持功能码：01读线圈状态、02读输入状态、03读保持寄存器、04读输入寄存器、05写单个线圈、06写单个寄存器、15写多个线圈、16写多个寄存器、20读文件记录、21写文件记录。详细参考OPEN MODBUS/TCP SPECIFICATION"
+}

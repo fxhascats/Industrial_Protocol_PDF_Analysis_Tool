@@ -1,0 +1,31 @@
+{
+    "llm": {
+        "provider": "openai",
+        "model": "claude-sonnet-4-5-20250929",
+        "api_key": "cr_809f793a8b78daa4aad1ec66306a429ec84bf4ce3d2d90e7f215ef853e39f267",
+        "base_url": "https://xiaoai.ve-rel.com/api/v1"
+    },
+    "paths": {
+        "input_pdf": "/Users/fxhascats/pdf/输入.pdf",
+        "template_pdf": "/Users/fxhascats/pdf/工业协议阅读模板.pdf",
+        "output_dir": "/Users/fxhascats/pdf/outputs"
+    },
+    "template_fields": {
+        "protocol_name": "协议名称",
+        "protocol_version": "协议版本",
+        "author": "作者/单位",
+        "doc_date": "文档日期",
+        "doc_description": "文档说明",
+        "communication_type": "通信方式",
+        "ip_port": "IP/端口",
+        "protocol_config": "协议配置说明",
+        "signals": [
+            {"id": "序号", "name": "信号名称", "address": "地址/节点", "type": "类型", "unit": "单位", "remark": "备注"}
+        ],
+        "data_format": "数据格式",
+        "timestamp": "时间戳",
+        "error_codes": "错误码",
+        "data_example": "数据示例",
+        "appendix": "附录"
+    }
+}
